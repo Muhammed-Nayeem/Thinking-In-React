@@ -1,10 +1,12 @@
 import "./App.css";
+import Clock from "./ReactLessons/LessonTwo/Clock";
 
 function App() {
   
   return (
     <div className="app">
-      <h3>Hello React.JS</h3>
+      <Clock locale="bn-BD"></Clock>
+      <Clock locale="en-US"></Clock>
     </div>
   );
 }
