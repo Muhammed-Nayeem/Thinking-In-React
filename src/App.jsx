@@ -1,13 +1,11 @@
 import "./App.css";
-import ClockList from "./ReactLessons/LessonFive/ClockList";
-
-const quantities = [1, 2, 3, 4];
+import Form from "./ReactLessons/LessonSix/Form";
 
 function App() {
 
   return (
     <div className="app">
-      <ClockList quantities={quantities}></ClockList>
+      <Form></Form>
     </div>
   );
 }
