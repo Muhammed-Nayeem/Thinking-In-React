@@ -1,11 +1,11 @@
 import "./App.css";
-import Clock from "./ReactLessons/LessonThree/Clock";
+import Clock from "./ReactLessons/LessonFour/Clock";
 
 function App() {
-  
+  console.log("App Component Render!");
   return (
     <div className="app">
-      <Clock locale="bn-BD"></Clock>
+      <Clock></Clock>
     </div>
   );
 }
