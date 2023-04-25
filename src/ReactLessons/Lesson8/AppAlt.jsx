@@ -1,6 +1,6 @@
-import Emoji from "./ReactLessons/LessonEight/Composition/Emoji";
-import Bracket from "./ReactLessons/LessonEight/Composition/Bracket";
-import Text from "./ReactLessons/LessonEight/Composition/Text";
+import Emoji from "./ReactLessons/Lesson8/Composition/Emoji";
+import Bracket from "./ReactLessons/Lesson8/Composition/Bracket";
+import Text from "./ReactLessons/Lesson8/Composition/Text";
 
 //Composition Technique:
 
