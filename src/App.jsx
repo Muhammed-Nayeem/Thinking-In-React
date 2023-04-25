@@ -1,6 +1,6 @@
 import "./App.css";
-import ClickCount from "./ReactLessons/LessonNine/ClickCount";
-import HoverCount from "./ReactLessons/LessonNine/HoverCount";
+import ClickCount from "./ReactLessons/Lesson9/ClickCount";
+import HoverCount from "./ReactLessons/Lesson9/HoverCount";
 
 
 function App() {
