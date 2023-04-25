@@ -1,9 +1,10 @@
-import "./App.css";
 import Emoji from "./ReactLessons/LessonEight/Composition/Emoji";
 import Bracket from "./ReactLessons/LessonEight/Composition/Bracket";
 import Text from "./ReactLessons/LessonEight/Composition/Text";
 
-function App() {
+//Composition Technique:
+
+function AppAlt() {
   
   return (
     <div className="app">
@@ -20,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppAlt;
