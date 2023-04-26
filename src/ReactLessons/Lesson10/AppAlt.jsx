@@ -6,7 +6,7 @@ import Counter from "./ReactLessons/Lesson10/RenderProps/Counter";
 
 //Render Props Technique: Props Dealing;
 
-function App() {
+function AppAlt() {
   return (
     <div className="app">
       {/* <User render={(isLoggedIn) => isLoggedIn ? "Nayeem" : "Guest"}></User> */}
@@ -50,4 +50,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppAlt;
