@@ -1,53 +1,49 @@
 import "./App.css";
-import ClickCounter from "./ReactLessons/Lesson10/ClickCounter";
-import HoverCounter from "./ReactLessons/Lesson10/HoverCounter";
-// import User from "./ReactLessons/Lesson10/RenderProps/User";
-import Counter from "./ReactLessons/Lesson10/RenderProps/Counter";
+import React from "react";
+import Counter from "./ReactLessons/Lesson11/Counter";
+import ClickCounter from "./ReactLessons/Lesson11/ClickCounter";
+import Section from "./ReactLessons/Lesson11/Section";
+import ThemeContext from "./contexts/ThemeContext";
 
-//Render Props Technique: Props Dealing;
+// function App() {
+//   return (
+//     <div className="app">
+//       <Counter>
+//         {(counter, incrementCounter) => (
+//           <ClickCounter counter={counter} incrementCounter={incrementCounter} />
+//         )}
+//       </Counter>
+//       <Section />
+//     </div>
+//   );
+// }
 
-function App() {
-  return (
-    <div className="app">
-      {/* <User render={(isLoggedIn) => isLoggedIn ? "Nayeem" : "Guest"}></User> */}
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: "dark",
+    };
+  }
 
-      {/* <Counter
-        render={(counter, incrementCounter) => (
-          <ClickCounter
-            counter={counter}
-            incrementCounter={incrementCounter}
-          ></ClickCounter>
-        )}
-      />
-
-      <Counter
-        render={(counter, incrementCounter) => (
-          <HoverCounter
-            counter={counter}
-            incrementCounter={incrementCounter}
-          ></HoverCounter>
-        )}
-      /> */}
-
-      <Counter>
-        {(counter, incrementCounter) => (
-          <ClickCounter
-            counter={counter}
-            incrementCounter={incrementCounter}
-          ></ClickCounter>
-        )}
-      </Counter>
-
-      <Counter>
-        {(counter, incrementCounter) => (
-          <HoverCounter
-            counter={counter}
-            incrementCounter={incrementCounter}
-          ></HoverCounter>
-        )}
-      </Counter>
-    </div>
-  );
+  render() {
+    const {theme} = this.state;
+    return (
+      <div className="app">
+        <Counter>
+          {(counter, incrementCounter) => (
+            <ClickCounter
+              counter={counter}
+              incrementCounter={incrementCounter}
+            />
+          )}
+        </Counter>
+        <ThemeContext.Provider value={{theme: theme}}>
+          <Section />
+        </ThemeContext.Provider>
+      </div>
+    );
+  }
 }
 
 export default App;
