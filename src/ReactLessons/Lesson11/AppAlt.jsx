@@ -22,12 +22,40 @@ class AppAlt extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: "dark",
+      theme: "light",
+      switchTheme: () => {
+        this.setState(({ theme }) => {
+          if (theme === "dark") {
+            return {
+              theme: "light",
+            };
+          } else {
+            return {
+              theme: "dark",
+            };
+          }
+        });
+      },
     };
   }
 
+  //Keep this as method:
+  // switchTheme = () => {
+  //   this.setState(({ theme }) => {
+  //     if (theme === "dark") {
+  //       return {
+  //         theme: "light",
+  //       };
+  //     } else {
+  //       return {
+  //         theme: "dark",
+  //       };
+  //     }
+  //   });
+  // };
+
   render() {
-    const {theme} = this.state;
+    // const { theme, switchTheme } = this.state;
     return (
       <div className="app">
         <Counter>
@@ -38,7 +66,12 @@ class AppAlt extends React.Component {
             />
           )}
         </Counter>
-        <ThemeContext.Provider value={{theme: theme}}>
+
+        {/* <ThemeContext.Provider value={{ theme: theme, switchTheme: switchTheme }}>
+          <Section />
+        </ThemeContext.Provider> */}
+
+        <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
       </div>
