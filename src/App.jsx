@@ -4,7 +4,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h3>useRef Hook</h3>
+      <h3>useReducer Hook</h3>
     </div>
   );
 };
