@@ -12,7 +12,11 @@ class EffectClass extends React.Component {
   componentDidMount() {
     const { count } = this.state;
     document.title = `You clicked ${count} times`;
-    setInterval(() => this.ticking(), 1000);
+    this.interval = setInterval(() => this.ticking(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   componentDidUpdate() {
@@ -21,6 +25,7 @@ class EffectClass extends React.Component {
   }
 
   ticking = () => {
+    console.log("Time is ticking");
     this.setState({
       date: new Date(),
     });

@@ -16,7 +16,13 @@ const Effect = () => {
 
   useEffect(() => {
     console.log("Time Start....");
-    setInterval(() => tick(), 1000);
+    const interval = setInterval(() => tick(), 1000);
+
+    //clean up : do timer stop
+    return () => {
+      console.log("Component will unmounted");
+      clearInterval(interval);
+    }
   }, []);
 
   const increaseHandler = () => {
