@@ -1,10 +1,13 @@
 import "./App.css";
+import LayoutComponentOne from "./FunctionalComponentsAndHook/Lesson6/LayoutComponentOne";
+import LayoutComponentTwo from "./FunctionalComponentsAndHook/Lesson6/LayoutComponentTwo";
 
 const App = () => {
 
   return (
     <div className="app">
-      <h3>custom hook</h3>
+      <LayoutComponentOne />
+      <LayoutComponentTwo />
     </div>
   );
 };
